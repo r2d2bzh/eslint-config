@@ -20,7 +20,7 @@ You need to add the following NPM development dependency to the project that nee
 
 `npm install --save-dev @r2d2bzh/eslint-config#<VERSION>`
 
-NOTE: Replace `<VERSION>` with a git tag of the https://github.com/r2d2bzh/js-rules/releases[`eslint-config` repository].
+NOTE: Replace `<VERSION>` with a git tag of the https://github.com/r2d2bzh/eslint-config/releases[`eslint-config` repository].
 
 This will add the package `eslint-config` in your repo.
 
@@ -30,7 +30,7 @@ In order to instruct eslint to apply these rules, you need to create an `eslintr
 [source,json]
 ----
 {
-  "extends": ["@r2d2bzh/eslint-config"]
+  "extends": ["@r2d2bzh"]
 }
 ----
 
