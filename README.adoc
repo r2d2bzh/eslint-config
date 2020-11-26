@@ -1,0 +1,59 @@
+:source-highlighter: highlightjs
+
+= ESLINT-CONFIG
+
+The r2d2bzh product stack is composed of multiple NodeJS micro-services.
+They need to be written with the same eslint rules thus the need to https://eslint.org/docs/developer-guide/shareable-configs[share these rules] in order to avoid developers to maintain them in each project.
+
+== Current set of rules
+
+The current set of rules provided by this shared configuration follows:
+
+[source,js]
+----
+include::index.js[tag=rules]
+----
+
+== Install
+
+You need to add the following NPM development dependency to the project that needs to be checked:
+
+`npm install --save-dev @r2d2bzh/eslint-config#<VERSION>`
+
+NOTE: Replace `<VERSION>` with a git tag of the https://github.com/r2d2bzh/eslint-config/releases[`eslint-config` repository].
+
+This will add the package `eslint-config` in your repo.
+
+In order to instruct eslint to apply these rules, you need to create an `eslintrc.json` file close to the `package.json` file:
+
+.eslintrc.json
+[source,json]
+----
+{
+  "extends": ["@r2d2bzh"]
+}
+----
+
+WARNING: This package has peer dependencies that you need to install manually.
+This is to follow https://eslint.org/docs/developer-guide/shareable-configs#publishing-a-shareable-config[eslint recommendations].
+
+== Ensuring linting
+
+To ensure that the eslint rules are followed, the current recommendation is to add `husky` and `lint-staged` to the project:
+
+`npm install --save-dev husky lint-staged`
+
+.package.json
+[source,json]
+----
+{
+  "eslint-staged": {
+    "*.js": ["eslint"]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  }
+}
+----
