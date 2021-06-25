@@ -60,7 +60,7 @@ module.exports = {
     // https://eslint.org/docs/rules/no-trailing-spaces
     'no-trailing-spaces': 'error',
     // https://eslint.org/docs/rules/one-var
-    'one-var': 'never',
+    'one-var': ['error', 'never'],
   },
   // end::rules[]
 };
