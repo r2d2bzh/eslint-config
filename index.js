@@ -5,9 +5,10 @@ module.exports = {
   },
   extends: [
     'eslint:recommended',
-    'plugin:prettier/recommended',
+    'plugin:ava/recommended',
     'plugin:import/recommended',
     'plugin:node/recommended',
+    'plugin:prettier/recommended',
     'plugin:promise/recommended',
   ],
   parserOptions: {
@@ -63,6 +64,10 @@ module.exports = {
     'no-trailing-spaces': 'error',
     // https://eslint.org/docs/rules/one-var
     'one-var': ['error', 'never'],
+    // https://github.com/avajs/eslint-plugin-ava/blob/main/docs/rules/no-cb-test.md
+    'ava/no-cb-test': 'error',
+    // https://github.com/avajs/eslint-plugin-ava/blob/main/docs/rules/prefer-power-assert.md
+    'ava/prefer-power-assert': 'warn',
   },
   // end::rules[]
 };
