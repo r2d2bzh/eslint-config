@@ -39,8 +39,10 @@ module.exports = {
     'no-unused-vars': ['error', { ignoreRestSiblings: true }],
     // https://eslint.org/docs/rules/prefer-const
     'prefer-const': 'error',
+    // https://eslint.org/docs/rules/no-alert
+    'no-alert': 'error',
     // https://eslint.org/docs/rules/no-console
-    'no-console': 'off',
+    'no-console': 'error',
     // https://eslint.org/docs/rules/no-var
     'no-var': 'error',
     // https://eslint.org/docs/rules/linebreak-style
