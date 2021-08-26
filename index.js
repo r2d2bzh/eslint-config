@@ -10,6 +10,7 @@ module.exports = {
     'plugin:node/recommended',
     'plugin:prettier/recommended',
     'plugin:promise/recommended',
+    'plugin:security/recommended',
   ],
   parserOptions: {
     ecmaVersion: 12,
