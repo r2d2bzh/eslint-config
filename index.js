@@ -1,4 +1,4 @@
-import unicorn from 'eslint-plugin-unicorn';
+const unicorn = require('eslint-plugin-unicorn');
 
 module.exports = {
   env: {
