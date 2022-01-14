@@ -7,10 +7,10 @@ module.exports = {
     'eslint:recommended',
     'plugin:ava/recommended',
     'plugin:import/recommended',
-    'plugin:node/recommended',
     'plugin:prettier/recommended',
     'plugin:promise/recommended',
     'plugin:security/recommended',
+    'plugin:unicorn/recommended',
   ],
   parserOptions: {
     ecmaVersion: 12,
@@ -35,8 +35,6 @@ module.exports = {
         printWidth: 120,
       },
     ],
-    // https://github.com/mysticatea/eslint-plugin-node/blob/master/docs/rules/no-unpublished-import.md
-    'node/no-unpublished-import': 'off',
     // https://eslint.org/docs/rules/no-unused-vars#ignorerestsiblings
     'no-unused-vars': ['error', { ignoreRestSiblings: true }],
     // https://eslint.org/docs/rules/prefer-const
