@@ -1,3 +1,5 @@
+import unicorn from 'eslint-plugin-unicorn';
+
 module.exports = {
   env: {
     es6: true,
@@ -67,6 +69,10 @@ module.exports = {
     'ava/no-cb-test': 'error',
     // https://github.com/avajs/eslint-plugin-ava/blob/main/docs/rules/prefer-power-assert.md
     'ava/prefer-power-assert': 'warn',
+    // eslint-plugin-unicorn will only produce warnings for now
+    ...Object.fromEntries(Object.entries(unicorn.configs.recommended.rules).map(
+      ([rule, setting]) => setting === 'error' ? [rule, 'warn'] : [rule, setting]
+    ))
   },
   // end::rules[]
 };
