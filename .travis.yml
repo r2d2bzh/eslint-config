@@ -1,16 +1,20 @@
 language: node_js
 sudo: false
 node_js:
-- 10
+- 16
 install:
 - npm i
 script: true
+before_deploy:
+  - npm install -g auto-dist-tag@1
+  - auto-dist-tag --write
 deploy:
   provider: npm
   email: gautaz@users.noreply.github.com
   api_key:
     secure: F3ypUC6uDS4Ck/HVIxVf/OJZBhN7uN1Iuqw9ymr6uhHZm3rFTr1i2uEQl/7coQPQEbHAvdlJKcmGmorZXyj2Y4ynW22yVOZx6FzF5hNDV+xJACi5kRDqGH1YyhcfbZilbgqUAyDsjVOVIfeftc+u6MvxHH1/S+mok7jLabaeG7uTwbmIEiePOqxMWXNkd9r9h3L4TMp7D7enC5UWfNgNMCnleHxewoLbDrHsxRmQwxT3Oxru6/HEhPKx4LVlGb6QcvAplA9Gr26ZdorMzVP0m92gMEdEthyW5RWEHrqJs/B5eU2B0Z9gDCRxc7oDqB8qo2qa5yfbZAG29+n4+T9ErVeLXPXxx0gL7vQQbhl2wXGObqzrMrW5ZISZjYn34d+jWx0VJpL8prjPcEBiEsy6e7g3/qzckuIL7TO2D1S07pctbCXsId+PYcmGT4FLLQj1yzSBtCWf4D3qYuOLqpou43vwArlpVTTBwcQqUOQB1pV134f9SHNJmQ498WvH5jsoI7Dh2LU7JcasQsyvSIQ0l9gEb0ScpWutg1vKIQ41M1UyY8Bi1DxnI3WhhJvE0iXEZODLuhjr6nWQwbJI6OV9EaZipupM02MFqQYzB4BU9UmgJAb3gGmv5ENB465vpV13/SBDlOb+/32fu43+xQgf6qyq95k7oeUWSei3bktp0iE=
   on:
+    all_branches: true
     tags: true
     repo: r2d2bzh/eslint-config
   skip_cleanup: 'true'
