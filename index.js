@@ -65,8 +65,6 @@ module.exports = {
     'no-trailing-spaces': 'error',
     // https://eslint.org/docs/rules/one-var
     'one-var': ['error', 'never'],
-    // https://github.com/avajs/eslint-plugin-ava/blob/main/docs/rules/no-cb-test.md
-    'ava/no-cb-test': 'error',
     // https://github.com/avajs/eslint-plugin-ava/blob/main/docs/rules/prefer-power-assert.md
     'ava/prefer-power-assert': 'warn',
     // eslint-plugin-unicorn will only produce warnings for now
