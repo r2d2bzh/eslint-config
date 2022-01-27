@@ -1,6 +1,6 @@
 {
   "name": "@r2d2bzh/eslint-config",
-  "version": "0.6.0-alpha.5",
+  "version": "0.6.0-alpha.6",
   "description": "r2d2bzh eslint configuration",
   "main": "index.js",
   "scripts": {
