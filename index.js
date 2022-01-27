@@ -51,7 +51,7 @@ module.exports = {
     // https://eslint.org/docs/rules/complexity
     complexity: ['error', { max: 5 }],
     // https://eslint.org/docs/rules/max-statements
-    'max-statements': ['error', { max: 7 }],
+    'max-statements': ['error', { max: 10 }],
     // https://eslint.org/docs/rules/max-statements-per-line
     'max-statements-per-line': ['error', { max: 1 }],
     // https://eslint.org/docs/rules/max-nested-callbacks
