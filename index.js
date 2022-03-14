@@ -65,6 +65,8 @@ module.exports = {
     'max-depth': ['error', { max: 2 }],
     // https://eslint.org/docs/rules/max-params
     'max-params': ['error', {max: 3}],
+    // https://eslint.org/docs/rules/no-nested-ternary
+    'no-nested-ternary': 'error',
     // https://eslint.org/docs/rules/no-trailing-spaces
     'no-trailing-spaces': 'error',
     // https://eslint.org/docs/rules/one-var
