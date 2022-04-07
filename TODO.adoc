@@ -1,0 +1,11 @@
+= New rules to consider
+
+The following rules might be https://maximorlov.com/linting-rules-for-asynchronous-code-in-javascript/#4-require-atomic-updates[of interest]:
+
+* https://eslint.org/docs/rules/no-await-in-loop[no-await-in-loop]
+* https://eslint.org/docs/rules/no-promise-executor-return[no-promise-executor-return]
+* https://eslint.org/docs/rules/no-return-await[no-return-await]
+* https://eslint.org/docs/rules/prefer-promise-reject-errors[prefer-promise-reject-errors]
+* https://eslint.org/docs/rules/require-atomic-updates[require-atomic-updates]
+
+These are currently (2022-04-07) not part of any `:recommended` set included.
