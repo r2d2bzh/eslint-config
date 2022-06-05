@@ -4,6 +4,7 @@ module.exports = {
   env: {
     es6: true,
     node: true,
+    es2022: true,
   },
   extends: [
     'eslint:recommended',
@@ -14,10 +15,6 @@ module.exports = {
     'plugin:security/recommended',
     'plugin:unicorn/recommended',
   ],
-  parserOptions: {
-    ecmaVersion: 12,
-    sourceType: 'module',
-  },
   rules:
   // tag::rules[]
   {
