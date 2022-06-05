@@ -4,7 +4,7 @@
   "description": "r2d2bzh eslint configuration",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Warning: no test specified\""
+    "test": "eslint ."
   },
   "repository": {
     "type": "git",
@@ -25,14 +25,14 @@
     "access": "public"
   },
   "peerDependencies": {
-    "eslint": ">=8.7.0",
-    "eslint-config-prettier": ">=8.3.0",
+    "eslint": ">=8.17.0",
+    "eslint-config-prettier": ">=8.5.0",
     "eslint-plugin-ava": ">=13.2.0",
-    "eslint-plugin-import": ">=2.25.4",
+    "eslint-plugin-import": ">=2.26.0",
     "eslint-plugin-prettier": ">=4.0.0",
     "eslint-plugin-promise": ">=6.0.0",
-    "eslint-plugin-security": ">=1.4.0",
-    "eslint-plugin-unicorn": ">=40.1.0",
-    "prettier": ">=2.5.1"
+    "eslint-plugin-security": ">=1.5.0",
+    "eslint-plugin-unicorn": ">=42.0.0",
+    "prettier": ">=2.6.2"
   }
 }
