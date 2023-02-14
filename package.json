@@ -25,14 +25,14 @@
     "access": "public"
   },
   "peerDependencies": {
-    "eslint": ">=8.23.1",
-    "eslint-config-prettier": ">=8.5.0",
-    "eslint-plugin-ava": ">=13.2.0",
-    "eslint-plugin-import": ">=2.26.0",
+    "eslint": ">=8.34.0",
+    "eslint-config-prettier": ">=8.6.0",
+    "eslint-plugin-ava": ">=14.0.0",
+    "eslint-plugin-import": ">=2.27.5",
     "eslint-plugin-prettier": ">=4.2.1",
-    "eslint-plugin-promise": ">=6.0.1",
-    "eslint-plugin-security": ">=1.5.0",
-    "eslint-plugin-unicorn": ">=43.0.2",
-    "prettier": ">=2.7.1"
+    "eslint-plugin-promise": ">=6.1.1",
+    "eslint-plugin-security": ">=1.7.1",
+    "eslint-plugin-unicorn": ">=45.0.2",
+    "prettier": ">=2.8.4"
   }
 }
