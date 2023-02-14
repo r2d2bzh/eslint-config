@@ -66,6 +66,8 @@ module.exports = {
       'one-var': ['error', 'never'],
       // https://github.com/avajs/eslint-plugin-ava/blob/main/docs/rules/prefer-power-assert.md
       'ava/prefer-power-assert': 'warn',
+      // https://github.com/import-js/eslint-plugin-import/issues/2703
+      'import/no-unresolved': 'off',
     },
   // end::rules[]
 };
