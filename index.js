@@ -12,7 +12,7 @@ module.exports = {
     'plugin:import/recommended',
     'plugin:prettier/recommended',
     'plugin:promise/recommended',
-    'plugin:security/recommended',
+    'plugin:security/recommended-legacy',
     'plugin:unicorn/recommended',
   ],
   rules:
