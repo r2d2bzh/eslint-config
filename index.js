@@ -68,6 +68,8 @@ module.exports = {
       'ava/prefer-power-assert': 'warn',
       // https://github.com/import-js/eslint-plugin-import/issues/2703
       'import/no-unresolved': 'off',
+      // https://github.com/sindresorhus/eslint-plugin-unicorn/blob/v52.0.0/docs/rules/no-anonymous-default-export.md
+      'unicorn/no-anonymous-default-export': 'off',
     },
   // end::rules[]
 };
