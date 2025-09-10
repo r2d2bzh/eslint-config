@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.0.1](https://github.com/r2d2bzh/eslint-config/compare/2.0.0...2.0.1) (2025-09-10)
+
+
+### Bug Fixes
+
+* **ci:** Do not test during ci because no tests are defined ([b96aaed](https://github.com/r2d2bzh/eslint-config/commit/b96aaede179aaa42cd7a15d711d35f60e6484fe7))
+
 # [2.0.0](https://github.com/r2d2bzh/eslint-config/compare/1.0.6...2.0.0) (2025-09-10)
 
 
