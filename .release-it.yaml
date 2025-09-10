@@ -8,10 +8,11 @@ git:
   push: true
 plugins:
   "@release-it/conventional-changelog":
+    ignoreRecommendedBump: true
     preset: "angular"
     header: "# Changelog"
     infile: "CHANGELOG.md"
 hooks:
   before:init:
-  - npm it
+  - npm i
   after:release: "echo Successfully released ${name} v${version} to ${repo.repository}."
