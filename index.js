@@ -1,23 +1,18 @@
-/* ESLint does not support ESM configuration at this time */
-/* eslint-disable unicorn/prefer-module */
-module.exports = {
-  env: {
-    es6: true,
-    node: true,
-    es2022: true,
-  },
-  extends: [
-    'eslint:recommended',
-    'plugin:ava/recommended',
-    'plugin:import/recommended',
-    'plugin:prettier/recommended',
-    'plugin:promise/recommended',
-    'plugin:security/recommended-legacy',
-    'plugin:unicorn/recommended',
-  ],
-  rules:
+import { defineConfig, globalIgnores } from 'eslint/config';
+
+import eslintPluginPrettier from 'eslint-plugin-prettier/recommended';
+import eslintPluginAva from 'eslint-plugin-ava';
+import eslintPluginImport from 'eslint-plugin-import';
+import eslintPluginPromise from 'eslint-plugin-promise';
+import eslintPluginSecurity from 'eslint-plugin-security';
+import eslintPluginUnicorn from 'eslint-plugin-unicorn';
+
+export default defineConfig([
+  globalIgnores(['**/node_modules', '**/coverage', '/__tests__']),
+  {
+    files: ['**/*.js'],
     // tag::rules[]
-    {
+    rules: {
       // https://prettier.io/docs/en/integrating-with-linters.html#use-eslint-to-run-prettier
       // https://github.com/prettier/eslint-plugin-prettier#options
       'prettier/prettier': [
@@ -49,11 +44,11 @@ module.exports = {
       // https://eslint.org/docs/rules/complexity
       complexity: ['error', { max: 5 }],
       // https://eslint.org/docs/rules/max-statements
-      'max-statements': ['error', { max: 10 }],
+      'max-statements': ['error', { max: 15 }],
       // https://eslint.org/docs/rules/max-statements-per-line
       'max-statements-per-line': ['error', { max: 1 }],
       // https://eslint.org/docs/rules/max-nested-callbacks
-      'max-nested-callbacks': ['error', { max: 2 }],
+      'max-nested-callbacks': ['error', { max: 3 }],
       // https://eslint.org/docs/rules/max-depth
       'max-depth': ['error', { max: 2 }],
       // https://eslint.org/docs/rules/max-params
@@ -71,5 +66,17 @@ module.exports = {
       // https://github.com/sindresorhus/eslint-plugin-unicorn/blob/v52.0.0/docs/rules/no-anonymous-default-export.md
       'unicorn/no-anonymous-default-export': 'off',
     },
-  // end::rules[]
-};
+    // end::rules[]
+    plugins: {
+      ava: eslintPluginAva,
+      import: eslintPluginImport,
+      promise: eslintPluginPromise,
+      security: eslintPluginSecurity,
+      unicorn: eslintPluginUnicorn,
+    },
+    settings: {
+      'import/core-modules': ['ava'],
+    },
+  },
+  eslintPluginPrettier,
+]);

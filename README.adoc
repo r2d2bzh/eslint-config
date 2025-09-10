@@ -11,27 +11,32 @@ The current set of rules provided by this shared configuration follows:
 
 [source,js]
 ----
-include::index.js[tag=rules]
+include::./index.js[tag=rules]
 ----
 
 == Install
 
 You need to add the following NPM development dependency to the project that needs to be checked:
 
-`npm install --save-dev @r2d2bzh/eslint-config#<VERSION>`
+`npm install --save-dev eslint @r2d2bzh/eslint-config#<VERSION>`
 
 NOTE: Replace `<VERSION>` with a git tag of the https://github.com/r2d2bzh/eslint-config/releases[`eslint-config` repository].
 
 This will add the package `eslint-config` in your repo.
 
-In order to instruct eslint to apply these rules, you need to create an `eslintrc.json` file close to the `package.json` file:
+In order to instruct eslint to apply these rules, you need to create an `eslintrc.js` file close to the `package.json` file:
 
-.eslintrc.json
-[source,json]
+.eslintrc.js
+[source,js]
 ----
-{
-  "extends": ["@r2d2bzh"]
-}
+import { defineConfig } from 'eslint/config';
+import r2d2bzhEslintConfig from '@r2d2bzh/eslint-config';
+
+export default defineConfig([
+  {
+    extends: [r2d2bzhEslintConfig],
+  },
+]);
 ----
 
 WARNING: This package has peer dependencies that you need to install manually.
