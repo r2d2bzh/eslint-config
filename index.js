@@ -42,7 +42,7 @@ export default defineConfig([
       // https://eslint.org/docs/rules/linebreak-style
       'linebreak-style': ['error', 'unix'],
       // https://eslint.org/docs/rules/complexity
-      complexity: ['error', { max: 5 }],
+      complexity: ['error', { max: 20 }],
       // https://eslint.org/docs/rules/max-statements
       'max-statements': ['error', { max: 15 }],
       // https://eslint.org/docs/rules/max-statements-per-line
@@ -50,7 +50,7 @@ export default defineConfig([
       // https://eslint.org/docs/rules/max-nested-callbacks
       'max-nested-callbacks': ['error', { max: 3 }],
       // https://eslint.org/docs/rules/max-depth
-      'max-depth': ['error', { max: 2 }],
+      'max-depth': ['error', { max: 4 }],
       // https://eslint.org/docs/rules/max-params
       'max-params': ['error', { max: 3 }],
       // https://eslint.org/docs/rules/no-nested-ternary
