@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.1.1](https://github.com/r2d2bzh/eslint-config/compare/2.1.0...2.1.1) (2026-02-16)
+
+
+### Bug Fixes
+
+* Forgot to extend rules from plugins ([2831222](https://github.com/r2d2bzh/eslint-config/commit/283122242d60e043bd94f548d676227be07cf13e))
+
 # [2.1.0](https://github.com/r2d2bzh/eslint-config/compare/2.0.1...2.1.0) (2026-02-16)
 
 
