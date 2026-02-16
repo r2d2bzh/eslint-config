@@ -1,5 +1,17 @@
 # Changelog
 
+# [2.1.0](https://github.com/r2d2bzh/eslint-config/compare/2.0.1...2.1.0) (2026-02-16)
+
+
+### Bug Fixes
+
+* **doc:** Fix name of eslint config file in readme ([df2c281](https://github.com/r2d2bzh/eslint-config/commit/df2c2812d1392c86d11c22bfa6b39187dcfd9801))
+
+
+### Features
+
+* **rules:** Set complexity and max-depth to default values ([e5aa93c](https://github.com/r2d2bzh/eslint-config/commit/e5aa93ce49c2d730760a5a238800026e34b74cf1))
+
 ## [2.0.1](https://github.com/r2d2bzh/eslint-config/compare/2.0.0...2.0.1) (2025-09-10)
 
 
