@@ -13,6 +13,11 @@ export default defineConfig([
     files: ['**/*.js'],
     // tag::rules[]
     rules: {
+      ...eslintPluginAva.configs.recommended.rules,
+      ...eslintPluginImport.configs.recommended.rules,
+      ...eslintPluginPromise.configs.recommended.rules,
+      ...eslintPluginSecurity.configs.recommended.rules,
+      ...eslintPluginUnicorn.configs.recommended.rules,
       // https://prettier.io/docs/en/integrating-with-linters.html#use-eslint-to-run-prettier
       // https://github.com/prettier/eslint-plugin-prettier#options
       'prettier/prettier': [
