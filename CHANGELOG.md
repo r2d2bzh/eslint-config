@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.1.3](https://github.com/r2d2bzh/eslint-config/compare/2.1.2...2.1.3) (2026-02-17)
+
+
+### Bug Fixes
+
+* Set languageOptions ([fc45d86](https://github.com/r2d2bzh/eslint-config/commit/fc45d868da975d4261bfc143435a1ee6d744a1fd))
+
 ## [2.1.2](https://github.com/r2d2bzh/eslint-config/compare/2.1.1...2.1.2) (2026-02-17)
 
 
