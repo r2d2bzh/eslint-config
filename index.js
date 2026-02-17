@@ -1,4 +1,5 @@
 import { defineConfig, globalIgnores } from 'eslint/config';
+import js from '@eslint/js';
 
 import eslintPluginPrettier from 'eslint-plugin-prettier/recommended';
 import eslintPluginAva from 'eslint-plugin-ava';
@@ -11,6 +12,7 @@ export default defineConfig([
   globalIgnores(['**/node_modules', '**/coverage', '/__tests__']),
   {
     files: ['**/*.js'],
+    extends: ['js/recommended'],
     // tag::rules[]
     rules: {
       ...eslintPluginAva.configs.recommended.rules,
@@ -78,6 +80,7 @@ export default defineConfig([
       promise: eslintPluginPromise,
       security: eslintPluginSecurity,
       unicorn: eslintPluginUnicorn,
+      js
     },
     settings: {
       'import/core-modules': ['ava'],
