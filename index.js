@@ -1,5 +1,6 @@
 import { defineConfig, globalIgnores } from 'eslint/config';
 import js from '@eslint/js';
+import globals from 'globals';
 
 import eslintPluginPrettier from 'eslint-plugin-prettier/recommended';
 import eslintPluginAva from 'eslint-plugin-ava';
@@ -13,6 +14,13 @@ export default defineConfig([
   {
     files: ['**/*.js'],
     extends: ['js/recommended'],
+    languageOptions: {
+      ecmaVersion: 'latest',
+      sourceType: 'module',
+      globals: {
+        ...globals.node,
+      },
+    },
     // tag::rules[]
     rules: {
       ...eslintPluginAva.configs.recommended.rules,
