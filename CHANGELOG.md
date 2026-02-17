@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.1.2](https://github.com/r2d2bzh/eslint-config/compare/2.1.1...2.1.2) (2026-02-17)
+
+
+### Bug Fixes
+
+* Extend configuration from js/recommended ([1db5f52](https://github.com/r2d2bzh/eslint-config/commit/1db5f52a9f7efef587c5015c59f4c4c7eeac1f81))
+
 ## [2.1.1](https://github.com/r2d2bzh/eslint-config/compare/2.1.0...2.1.1) (2026-02-16)
 
 
