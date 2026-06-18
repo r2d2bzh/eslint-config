@@ -1,5 +1,12 @@
 # Changelog
 
+# [3.0.0](https://github.com/r2d2bzh/eslint-config/compare/3.0.0-beta.1...3.0.0) (2026-06-18)
+
+
+### Bug Fixes
+
+* lite rules update ([fa39f02](https://github.com/r2d2bzh/eslint-config/commit/fa39f02315d3730c021d6d4149217f7df3e2a446))
+
 ## [2.1.3](https://github.com/r2d2bzh/eslint-config/compare/2.1.2...2.1.3) (2026-02-17)
 
 
