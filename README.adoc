@@ -39,8 +39,11 @@ export default defineConfig([
 ]);
 ----
 
+This configuration lints both JavaScript (`*.js`, `*.cjs`, `*.mjs`) and TypeScript (`*.ts`, `*.cts`, `*.mts`, `*.tsx`) files.
+
 WARNING: This package has peer dependencies that you need to install manually.
 This is to follow https://eslint.org/docs/developer-guide/shareable-configs#publishing-a-shareable-config[eslint recommendations].
+For TypeScript support, `typescript` is an optional peer dependency that you only need to install in TypeScript projects.
 
 == Ensuring linting
 
@@ -53,7 +56,7 @@ To ensure that the eslint rules are followed, the current recommendation is to a
 ----
 {
   "eslint-staged": {
-    "*.js": ["eslint"]
+    "*.{js,cjs,mjs,ts,cts,mts,tsx}": ["eslint"]
   },
   "husky": {
     "hooks": {
