@@ -1,5 +1,7 @@
 # Changelog
 
+## [3.0.1](https://github.com/r2d2bzh/eslint-config/compare/3.0.0...3.0.1) (2026-06-18)
+
 # [3.0.0](https://github.com/r2d2bzh/eslint-config/compare/3.0.0-beta.1...3.0.0) (2026-06-18)
 
 
