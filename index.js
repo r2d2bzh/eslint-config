@@ -67,6 +67,13 @@ const rules = {
   'ava/prefer-power-assert': 'warn',
   // https://github.com/import-js/eslint-plugin-import/issues/2703
   'import-x/no-unresolved': 'off',
+  'unicorn/filename-case': [
+    'error',
+    {
+      ignore: ['__tests__'],
+      multipleFileExtensions: false,
+    }
+  ],
   // https://github.com/sindresorhus/eslint-plugin-unicorn/blob/v52.0.0/docs/rules/no-anonymous-default-export.md
   'unicorn/no-anonymous-default-export': 'off',
 };
@@ -86,7 +93,7 @@ const settings = {
 };
 
 export default defineConfig([
-  globalIgnores(['**/node_modules', '**/coverage', '/__tests__']),
+  globalIgnores(['**/node_modules', '**/coverage', '/__tests__', '**/vendor.d.ts']),
   {
     files: ['**/*.js', '**/*.cjs', '**/*.mjs'],
     extends: ['js/recommended'],
@@ -117,7 +124,6 @@ export default defineConfig([
       ...rules,
       // The base no-unused-vars rule is disabled in favour of the TypeScript-aware one.
       // https://typescript-eslint.io/rules/no-unused-vars/
-      'no-unused-vars': 'off',
       '@typescript-eslint/no-unused-vars': ['error', { ignoreRestSiblings: true }],
     },
     // end::ts-rules[]
