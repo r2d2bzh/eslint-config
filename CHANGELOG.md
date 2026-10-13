@@ -1,5 +1,19 @@
 # Changelog
 
+# [4.0.0](https://github.com/r2d2bzh/eslint-config/compare/3.0.1...4.0.0) (2026-10-13)
+
+* feat!: upgrade eslint-plugin-unicorn to 78 ([4e5f403](https://github.com/r2d2bzh/eslint-config/commit/4e5f403e2a9788f6629435f1036e52171d70b7c6))
+
+### Bug Fixes
+
+* **deps:** update dependencies ([b6fee76](https://github.com/r2d2bzh/eslint-config/commit/b6fee76a74c105db353c17a9edd78800edd2f557))
+
+### BREAKING CHANGES
+
+* eslint-plugin-unicorn 78 enables about a hundred new
+  recommended rules, so projects will report new errors, most of them
+  fixable with eslint --fix. ESLint 10.4 or later is now required.
+
 ## [3.0.1](https://github.com/r2d2bzh/eslint-config/compare/3.0.0...3.0.1) (2026-06-18)
 
 # [3.0.0](https://github.com/r2d2bzh/eslint-config/compare/3.0.0-beta.1...3.0.0) (2026-06-18)
