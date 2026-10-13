@@ -76,6 +76,27 @@ const rules = {
   ],
   // https://github.com/sindresorhus/eslint-plugin-unicorn/blob/v52.0.0/docs/rules/no-anonymous-default-export.md
   'unicorn/no-anonymous-default-export': 'off',
+  // https://github.com/sindresorhus/eslint-plugin-unicorn/blob/v78.0.0/docs/rules/name-replacements.md
+  'unicorn/name-replacements': [
+    'error',
+    {
+      // Long names are the house convention: keep the abbreviation expansions
+      // but not the few replacements going the other way
+      replacements: {
+        application: false,
+        applications: false,
+        configuration: false,
+        cfg: { config: false, configuration: true },
+      },
+    },
+  ],
+  // https://github.com/sindresorhus/eslint-plugin-unicorn/blob/v78.0.0/docs/rules/consistent-boolean-name.md
+  // Predicate functions are named after what they check (callerOwnsMessage) and
+  // preflight factories use the can prefix (canRemoveTask), which this rule rejects
+  'unicorn/consistent-boolean-name': 'off',
+  // https://github.com/sindresorhus/eslint-plugin-unicorn/blob/v78.0.0/docs/rules/isolated-functions.md
+  // Functions passed to page.evaluate() run in the browser
+  'unicorn/isolated-functions': ['error', { overrideGlobals: { window: 'readonly', document: 'readonly' } }],
 };
 // end::rules[]
 
@@ -132,6 +153,14 @@ export default defineConfig([
       '@typescript-eslint': tseslint.plugin,
     },
     settings,
+  },
+  {
+    files: ['**/__tests__/**', '**/test/**'],
+    rules: {
+      // https://github.com/sindresorhus/eslint-plugin-unicorn/blob/v78.0.0/docs/rules/no-unnecessary-parameters.md
+      // Test helpers expose optional parameters that a given test suite may never use
+      'unicorn/no-unnecessary-parameters': 'off',
+    },
   },
   eslintPluginPrettier,
 ]);
